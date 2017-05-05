@@ -5,7 +5,7 @@ target ‘PhotoWall' do
     pod 'NitroKeychain'
     pod 'AFNetworking'
     pod 'MagicalRecord'
-	pod 'SDWebImage'
+	pod 'SDWebImage', '3.7.5'
 
     target ‘PhotoWallTests' do
         pod 'Nocilla'
