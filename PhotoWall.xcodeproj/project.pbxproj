@@ -22,6 +22,8 @@
 		9FF461271EC5A0E3000C56F6 /* RestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF461261EC5A0E3000C56F6 /* RestResponse.m */; };
 		9FF4612A1EC5A89E000C56F6 /* RestRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF461291EC5A89E000C56F6 /* RestRequestTests.m */; };
 		9FF4612C1EC5AE65000C56F6 /* MaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF4612B1EC5AE65000C56F6 /* MaskView.xib */; };
+		9FF461381EC5B284000C56F6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF461361EC5B284000C56F6 /* LoginViewController.m */; };
+		9FF461391EC5B284000C56F6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF461371EC5B284000C56F6 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		9FF461261EC5A0E3000C56F6 /* RestResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestResponse.m; path = RestClient/RestResponse.m; sourceTree = SOURCE_ROOT; };
 		9FF461291EC5A89E000C56F6 /* RestRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestRequestTests.m; path = RestClient/RestRequestTests.m; sourceTree = "<group>"; };
 		9FF4612B1EC5AE65000C56F6 /* MaskView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MaskView.xib; path = View/MaskView.xib; sourceTree = SOURCE_ROOT; };
+		9FF461351EC5B284000C56F6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = View/LoginViewController.h; sourceTree = SOURCE_ROOT; };
+		9FF461361EC5B284000C56F6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = View/LoginViewController.m; sourceTree = SOURCE_ROOT; };
+		9FF461371EC5B284000C56F6 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = View/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
 		C4E3393C9379A1F83641833B /* Pods_PhotoWall_PhotoWallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoWall_PhotoWallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66359A8696F7F49B6FC9051 /* Pods-PhotoWall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoWall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoWall/Pods-PhotoWall.debug.xcconfig"; sourceTree = "<group>"; };
 		CBDFCD3903FCDE53D83F2B21 /* Pods-PhotoWall-PhotoWallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoWall-PhotoWallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoWall-PhotoWallTests/Pods-PhotoWall-PhotoWallTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				9FF4612B1EC5AE65000C56F6 /* MaskView.xib */,
+				9FF461351EC5B284000C56F6 /* LoginViewController.h */,
+				9FF461361EC5B284000C56F6 /* LoginViewController.m */,
+				9FF461371EC5B284000C56F6 /* LoginViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -289,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF461391EC5B284000C56F6 /* LoginViewController.xib in Resources */,
 				9FF4612C1EC5AE65000C56F6 /* MaskView.xib in Resources */,
 				9F208CF91EBC634400E36A4A /* LaunchScreen.storyboard in Resources */,
 				9F208CF61EBC634400E36A4A /* Assets.xcassets in Resources */,
@@ -403,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF461381EC5B284000C56F6 /* LoginViewController.m in Sources */,
 				9F208CF41EBC634400E36A4A /* PhotoWall.xcdatamodeld in Sources */,
 				9FF461241EC59A39000C56F6 /* RestRequest.m in Sources */,
 				9FF461271EC5A0E3000C56F6 /* RestResponse.m in Sources */,
