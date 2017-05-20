@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
+            <connections>
+                <outlet property="friendsTabButton" destination="3CQ-Bt-tkq" id="Vei-R3-4wX"/>
+                <outlet property="gridTabButton" destination="1gJ-MJ-bgh" id="vDm-WE-DoT"/>
+                <outlet property="photoMapTabButton" destination="71k-jS-9tT" id="nq6-ZU-rwE"/>
+                <outlet property="profileTabButton" destination="tAv-wF-UFy" id="0Zu-L4-BSq"/>
+                <outlet property="takePictureTabButton" destination="Huo-Io-pBI" id="Txf-aC-eJC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContainer" destination="6MH-5j-8s9" id="U9T-vK-yb2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-5j-8s9" userLabel="Container">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXC-84-uf5" userLabel="Tab Bars">
+                    <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CQ-Bt-tkq" userLabel="Friends Button">
+                            <rect key="frame" x="0.0" y="35" width="75" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="eqB-eo-bjd"/>
+                            </constraints>
+                            <state key="normal" image="friends_normal"/>
+                            <state key="selected" image="friends_selected"/>
+                            <connections>
+                                <action selector="tabButtonPressed:" destination="-1" eventType="touchUpInside" id="xPI-uD-rAC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gJ-MJ-bgh" userLabel="Grid Tab Button">
+                            <rect key="frame" x="75" y="35" width="75" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Orh-na-0h8"/>
+                            </constraints>
+                            <state key="normal" image="photos_normal"/>
+                            <state key="selected" image="photos_selected"/>
+                            <connections>
+                                <action selector="tabButtonPressed:" destination="-1" eventType="touchUpInside" id="YGl-WF-dXF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Huo-Io-pBI" userLabel="Take Picture">
+                            <rect key="frame" x="150" y="0.0" width="75" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Huo-Io-pBI" secondAttribute="height" id="2X8-ce-g4C"/>
+                            </constraints>
+                            <state key="normal" image="take_picture"/>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71k-jS-9tT" userLabel="Map">
+                            <rect key="frame" x="225" y="35" width="75" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="aBc-p6-nru"/>
+                            </constraints>
+                            <state key="normal" image="map_normal"/>
+                            <state key="selected" image="map_selected"/>
+                            <connections>
+                                <action selector="tabButtonPressed:" destination="-1" eventType="touchUpInside" id="2wm-0D-Kp1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAv-wF-UFy" userLabel="Profile">
+                            <rect key="frame" x="300" y="35" width="75" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="3Q2-LU-qFU"/>
+                            </constraints>
+                            <state key="normal" image="profile_normal"/>
+                            <state key="selected" image="profile_selected"/>
+                            <connections>
+                                <action selector="tabButtonPressed:" destination="-1" eventType="touchUpInside" id="paV-Bp-j5d"/>
+                            </connections>
+                        </button>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnf-6o-3AM" userLabel="Background">
+                            <rect key="frame" x="150" y="35" width="75" height="40"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="tAv-wF-UFy" secondAttribute="trailing" id="0HJ-KE-suF"/>
+                        <constraint firstItem="1gJ-MJ-bgh" firstAttribute="leading" secondItem="3CQ-Bt-tkq" secondAttribute="trailing" id="8Wx-Q4-rJq"/>
+                        <constraint firstItem="Huo-Io-pBI" firstAttribute="leading" secondItem="1gJ-MJ-bgh" secondAttribute="trailing" id="8iS-60-u74"/>
+                        <constraint firstItem="1gJ-MJ-bgh" firstAttribute="height" secondItem="cnf-6o-3AM" secondAttribute="height" id="A4G-Mb-1dd"/>
+                        <constraint firstAttribute="bottom" secondItem="Huo-Io-pBI" secondAttribute="bottom" id="Ae8-1F-PDV"/>
+                        <constraint firstItem="71k-jS-9tT" firstAttribute="width" secondItem="3CQ-Bt-tkq" secondAttribute="width" id="EFh-PT-MIn"/>
+                        <constraint firstItem="1gJ-MJ-bgh" firstAttribute="width" secondItem="3CQ-Bt-tkq" secondAttribute="width" id="Hq1-jm-gsz"/>
+                        <constraint firstItem="tAv-wF-UFy" firstAttribute="width" secondItem="3CQ-Bt-tkq" secondAttribute="width" id="Hqf-wn-suR"/>
+                        <constraint firstItem="cnf-6o-3AM" firstAttribute="leading" secondItem="1gJ-MJ-bgh" secondAttribute="trailing" id="IBK-5f-pRx"/>
+                        <constraint firstAttribute="bottom" secondItem="3CQ-Bt-tkq" secondAttribute="bottom" id="OS7-H5-bGO"/>
+                        <constraint firstAttribute="bottom" secondItem="1gJ-MJ-bgh" secondAttribute="bottom" id="Qdg-HV-Rak"/>
+                        <constraint firstItem="3CQ-Bt-tkq" firstAttribute="leading" secondItem="KXC-84-uf5" secondAttribute="leading" id="Skx-y2-ldE"/>
+                        <constraint firstItem="71k-jS-9tT" firstAttribute="leading" secondItem="cnf-6o-3AM" secondAttribute="trailing" id="Tam-8a-Sd4"/>
+                        <constraint firstItem="1gJ-MJ-bgh" firstAttribute="width" secondItem="cnf-6o-3AM" secondAttribute="width" id="ZlO-xc-g9Y"/>
+                        <constraint firstAttribute="bottom" secondItem="71k-jS-9tT" secondAttribute="bottom" id="amC-ug-RJ0"/>
+                        <constraint firstAttribute="bottom" secondItem="cnf-6o-3AM" secondAttribute="bottom" id="gBj-N2-uCc"/>
+                        <constraint firstItem="tAv-wF-UFy" firstAttribute="leading" secondItem="71k-jS-9tT" secondAttribute="trailing" id="mGf-Ny-zde"/>
+                        <constraint firstItem="Huo-Io-pBI" firstAttribute="width" secondItem="3CQ-Bt-tkq" secondAttribute="width" id="xlx-fc-DBR"/>
+                        <constraint firstItem="71k-jS-9tT" firstAttribute="leading" secondItem="Huo-Io-pBI" secondAttribute="trailing" id="xy6-3t-aIg"/>
+                        <constraint firstItem="Huo-Io-pBI" firstAttribute="height" secondItem="KXC-84-uf5" secondAttribute="height" id="yVV-o8-wGV"/>
+                        <constraint firstAttribute="bottom" secondItem="tAv-wF-UFy" secondAttribute="bottom" id="zJf-kb-Ypo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KXC-84-uf5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7pH-Am-bxQ"/>
+                <constraint firstAttribute="bottom" secondItem="KXC-84-uf5" secondAttribute="bottom" id="8Ju-rg-ugE"/>
+                <constraint firstAttribute="trailing" secondItem="KXC-84-uf5" secondAttribute="trailing" id="ETw-Bv-5LA"/>
+                <constraint firstItem="6MH-5j-8s9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Jbc-Nc-j2a"/>
+                <constraint firstAttribute="trailing" secondItem="6MH-5j-8s9" secondAttribute="trailing" id="NzP-bl-eBl"/>
+                <constraint firstAttribute="bottom" secondItem="6MH-5j-8s9" secondAttribute="bottom" id="ScJ-p2-kgw"/>
+                <constraint firstItem="6MH-5j-8s9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uli-Qo-JqY"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="friends_normal" width="24" height="24"/>
+        <image name="friends_selected" width="24" height="24"/>
+        <image name="map_normal" width="24" height="24"/>
+        <image name="map_selected" width="24" height="24"/>
+        <image name="photos_normal" width="24" height="24"/>
+        <image name="photos_selected" width="24" height="24"/>
+        <image name="profile_normal" width="24" height="24"/>
+        <image name="profile_selected" width="24" height="24"/>
+        <image name="take_picture" width="48" height="48"/>
+    </resources>
+</document>

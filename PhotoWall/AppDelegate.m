@@ -8,16 +8,42 @@
 
 #import "AppDelegate.h"
 
+#import <MagicalRecord/MagicalRecord.h>
+
+#import "RestClient.h"
+#import "KeyChainSecuredAuthenticator.h"
+
+
+#import "LoginViewController.h" //登入畫面
+#import "RootViewController.h"
+
+#import "UIViewController+Mask.h"
+
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    RestClient* _client;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    // In general, we will init value in here.
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"PhotoWall"];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    KeyChainSecuredAuthenticator* authenticator = [KeyChainSecuredAuthenticator new];
+    _client = [[RestClient alloc] initWithAuthenticator:authenticator];
+    [self initializeManagers];
+    if (self.accountManager.logined) {
+        [self showRootView];
+    }
+    else {
+        [self showLoginView];
+    }
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -47,53 +73,57 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
-    [self saveContext];
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
+    [MagicalRecord cleanUp];
 }
 
 
-#pragma mark - Core Data stack
-
-@synthesize persistentContainer = _persistentContainer;
-
-- (NSPersistentContainer *)persistentContainer {
-    // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
-    @synchronized (self) {
-        if (_persistentContainer == nil) {
-            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"PhotoWall"];
-            [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
-                if (error != nil) {
-                    // Replace this implementation with code to handle the error appropriately.
-                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                    
-                    /*
-                     Typical reasons for an error here include:
-                     * The parent directory does not exist, cannot be created, or disallows writing.
-                     * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                     * The device is out of space.
-                     * The store could not be migrated to the current model version.
-                     Check the error message to determine what the actual problem was.
-                    */
-                    NSLog(@"Unresolved error %@, %@", error, error.userInfo);
-                    abort();
-                }
-            }];
-        }
-    }
-    
-    return _persistentContainer;
+#pragma mark - AuthenticationDelegate
+- (void)logouted {
+    [self.window.rootViewController hideMask];
+    [self initializeManagers];
+    [self showLoginView];
 }
 
-#pragma mark - Core Data Saving support
-
-- (void)saveContext {
-    NSManagedObjectContext *context = self.persistentContainer.viewContext;
-    NSError *error = nil;
-    if ([context hasChanges] && ![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
-        abort();
-    }
+- (void)logoutFailed:(NSError *)error {
+    // do nothing
+    [self.window.rootViewController hideMask];
 }
 
+- (void)authenticated:(User*)me {
+    NSLog(@"%@ authenticated", me);
+    [self.window.rootViewController hideMask];
+    [self showRootView];
+}
+
+- (void)authenticationFailed:(NSError*)error {
+    [self.window.rootViewController hideMask];
+    NSString* message = @"unable to login/register, please try again later";
+    UIAlertController* controller = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
+    [controller addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
+    [self.window.rootViewController presentViewController:controller animated:YES completion:nil];
+}
+#pragma mark - Private Methods
+- (void)showLoginView {
+    LoginViewController* loginController = [[LoginViewController alloc] initWithNibName:@"LoginView" bundle:nil];
+    loginController.accountManager = self.accountManager;
+    [self.window setRootViewController:loginController];
+}
+
+- (void)showRootView {
+    RootViewController* root = [[RootViewController alloc] initWithNibName:@"RootView" bundle:nil];
+//    root.userManager = self.userManager;
+//    root.photoManager = self.photoManager;
+    root.accountManager = self.accountManager;
+    UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:root];
+    [self.window setRootViewController:navigation];
+//    [self.userManager synchronize];
+}
+
+- (void)initializeManagers {
+//    self.userManager = [[UserManager alloc] initWithClient:_client];
+//    self.photoManager = [[PhotoManager alloc] initWithClient:_client];
+    self.accountManager = [[AccountManager alloc] initWithClient:_client];
+    self.accountManager.authDelegate = self;
+}
 @end
