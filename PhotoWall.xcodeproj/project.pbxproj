@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34F855D5DF3E259717F9F0B5 /* Pods_PhotoWall_PhotoWallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E3393C9379A1F83641833B /* Pods_PhotoWall_PhotoWallTests.framework */; };
 		87228D74C039C007FC94F2E3 /* Pods_PhotoWall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC83FA5BF7BB900072906635 /* Pods_PhotoWall.framework */; };
 		9F208CE81EBC634400E36A4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F208CE71EBC634400E36A4A /* main.m */; };
 		9F208CEB1EBC634400E36A4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F208CEA1EBC634400E36A4A /* AppDelegate.m */; };
@@ -25,6 +24,11 @@
 		9FF461381EC5B284000C56F6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF461361EC5B284000C56F6 /* LoginViewController.m */; };
 		9FF461391EC5B284000C56F6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF461371EC5B284000C56F6 /* LoginViewController.xib */; };
 		9FF4613B1EC5E62B000C56F6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF4613A1EC5E62B000C56F6 /* Media.xcassets */; };
+		9FF6BAAC1ED06656008703FA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F208CFA1EBC634400E36A4A /* Info.plist */; };
+		9FF6BABE1ED06A8B008703FA /* Pods_PhotoWall_PhotoWallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E3393C9379A1F83641833B /* Pods_PhotoWall_PhotoWallTests.framework */; };
+		9FF6BACC1ED06E2B008703FA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF6BACB1ED06E2B008703FA /* User.m */; };
+		9FF6BACF1ED06E37008703FA /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF6BACE1ED06E37008703FA /* _User.m */; };
+		9FF6BAD11ED06EB0008703FA /* Mapping1-2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9FF6BAD01ED06EB0008703FA /* Mapping1-2.xcmappingmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,12 @@
 		9FF461361EC5B284000C56F6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = View/LoginViewController.m; sourceTree = SOURCE_ROOT; };
 		9FF461371EC5B284000C56F6 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = View/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
 		9FF4613A1EC5E62B000C56F6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		9FF6BAAB1ED065A4008703FA /* PhotoWall 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PhotoWall 2.xcdatamodel"; sourceTree = "<group>"; };
+		9FF6BACA1ED06E2B008703FA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
+		9FF6BACB1ED06E2B008703FA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		9FF6BACD1ED06E37008703FA /* _User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _User.h; path = PhotoWall/CoreDatamogenerator/_User.h; sourceTree = "<group>"; };
+		9FF6BACE1ED06E37008703FA /* _User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _User.m; path = PhotoWall/CoreDatamogenerator/_User.m; sourceTree = "<group>"; };
+		9FF6BAD01ED06EB0008703FA /* Mapping1-2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "Mapping1-2.xcmappingmodel"; sourceTree = "<group>"; };
 		C4E3393C9379A1F83641833B /* Pods_PhotoWall_PhotoWallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoWall_PhotoWallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66359A8696F7F49B6FC9051 /* Pods-PhotoWall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoWall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoWall/Pods-PhotoWall.debug.xcconfig"; sourceTree = "<group>"; };
 		CBDFCD3903FCDE53D83F2B21 /* Pods-PhotoWall-PhotoWallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoWall-PhotoWallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoWall-PhotoWallTests/Pods-PhotoWall-PhotoWallTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34F855D5DF3E259717F9F0B5 /* Pods_PhotoWall_PhotoWallTests.framework in Frameworks */,
+				9FF6BABE1ED06A8B008703FA /* Pods_PhotoWall_PhotoWallTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +116,7 @@
 		9F208CDA1EBC634400E36A4A = {
 			isa = PBXGroup;
 			children = (
+				9FF6BAD01ED06EB0008703FA /* Mapping1-2.xcmappingmodel */,
 				9F208CE51EBC634400E36A4A /* PhotoWall */,
 				9F208D021EBC634400E36A4A /* PhotoWallTests */,
 				9F208CE41EBC634400E36A4A /* Products */,
@@ -126,6 +137,7 @@
 		9F208CE51EBC634400E36A4A /* PhotoWall */ = {
 			isa = PBXGroup;
 			children = (
+				9FF6BABC1ED06A05008703FA /* CoreData */,
 				9FF4611E1EC598B6000C56F6 /* RestClient */,
 				9FF4611D1EC598AD000C56F6 /* View */,
 				9FF4611C1EC598A4000C56F6 /* Model */,
@@ -165,6 +177,8 @@
 		9FF4611C1EC598A4000C56F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9FF6BACA1ED06E2B008703FA /* User.h */,
+				9FF6BACB1ED06E2B008703FA /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -199,6 +213,16 @@
 				9FF461291EC5A89E000C56F6 /* RestRequestTests.m */,
 			);
 			name = RestClient;
+			sourceTree = "<group>";
+		};
+		9FF6BABC1ED06A05008703FA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9FF6BACD1ED06E37008703FA /* _User.h */,
+				9FF6BACE1ED06E37008703FA /* _User.m */,
+			);
+			name = CoreData;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A432504B66EF33D0939E3CB9 /* Frameworks */ = {
@@ -306,6 +330,7 @@
 				9F208CF61EBC634400E36A4A /* Assets.xcassets in Resources */,
 				9FF4613B1EC5E62B000C56F6 /* Media.xcassets in Resources */,
 				9F208CF11EBC634400E36A4A /* Main.storyboard in Resources */,
+				9FF6BAAC1ED06656008703FA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,12 +441,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF6BACF1ED06E37008703FA /* _User.m in Sources */,
 				9FF461381EC5B284000C56F6 /* LoginViewController.m in Sources */,
 				9F208CF41EBC634400E36A4A /* PhotoWall.xcdatamodeld in Sources */,
+				9FF6BACC1ED06E2B008703FA /* User.m in Sources */,
 				9FF461241EC59A39000C56F6 /* RestRequest.m in Sources */,
 				9FF461271EC5A0E3000C56F6 /* RestResponse.m in Sources */,
 				9F208CEE1EBC634400E36A4A /* ViewController.m in Sources */,
 				9F208CEB1EBC634400E36A4A /* AppDelegate.m in Sources */,
+				9FF6BAD11ED06EB0008703FA /* Mapping1-2.xcmappingmodel in Sources */,
 				9FF461211EC5996F000C56F6 /* RestClient.m in Sources */,
 				9F208CE81EBC634400E36A4A /* main.m in Sources */,
 			);
@@ -648,9 +676,10 @@
 		9F208CF21EBC634400E36A4A /* PhotoWall.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				9FF6BAAB1ED065A4008703FA /* PhotoWall 2.xcdatamodel */,
 				9F208CF31EBC634400E36A4A /* PhotoWall.xcdatamodel */,
 			);
-			currentVersion = 9F208CF31EBC634400E36A4A /* PhotoWall.xcdatamodel */;
+			currentVersion = 9FF6BAAB1ED065A4008703FA /* PhotoWall 2.xcdatamodel */;
 			path = PhotoWall.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
