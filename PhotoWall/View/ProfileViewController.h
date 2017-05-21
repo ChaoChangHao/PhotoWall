@@ -12,6 +12,8 @@
 
 @interface ProfileViewController : UIViewController
 
+
+@property (weak) AccountManager* accountManager;
 @property (weak) UIViewController* rootViewController;
 
 @end

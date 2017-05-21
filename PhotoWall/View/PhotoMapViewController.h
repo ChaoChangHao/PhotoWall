@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class UserManager;
+@class PhotoManager;
+
 @interface PhotoMapViewController : UIViewController
 
 @property (weak, nonatomic) UIViewController* rootViewController;
+@property (weak, nonatomic) UserManager* userManager;
+@property (weak, nonatomic) PhotoManager* photoManager;
 
 @end

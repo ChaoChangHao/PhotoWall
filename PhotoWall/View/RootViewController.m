@@ -50,10 +50,15 @@
     _viewControllers = @[ _friendsViewController, _photoGridViewController, _photoMapViewController, _profileViewController ];
     
     _profileViewController.rootViewController = self;
+    _profileViewController.accountManager = self.accountManager;
     
     _photoGridViewController.rootViewController = self;
+    _photoGridViewController.userManager = self.userManager;
+    _photoGridViewController.photoManager = self.photoManager;
     
     _photoMapViewController.rootViewController = self;
+    _photoMapViewController.userManager = self.userManager;
+    _photoMapViewController.photoManager = self.photoManager;
     
     _friendsViewController.rootViewController = self;
     _friendsViewController.userManager = self.userManager;
@@ -63,9 +68,9 @@
 }
 - (void)showPhotosOfUser:(NSString*)userId {
     PhotoGridViewController* controller = [[PhotoGridViewController alloc] initWithNibName:@"PhotoGridView" bundle:nil];
-//    controller.posterId = userId;
-//    controller.userManager = self.userManager;
-//    controller.photoManager = self.photoManager;
+    controller.posterId = userId;
+    controller.userManager = self.userManager;
+    controller.photoManager = self.photoManager;
     [self.navigationController pushViewController:controller animated:YES];
 }
 

@@ -49,6 +49,7 @@
 		9FF6BB761ED1F8C2008703FA /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF6BB751ED1F8C2008703FA /* NSDate+Utils.m */; };
 		9FF6BB791ED1FCCA008703FA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF6BB781ED1FCCA008703FA /* User.m */; };
 		9FF6BB7C1ED1FCDC008703FA /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF6BB7B1ED1FCDC008703FA /* _User.m */; };
+		9FF6BB801ED202EB008703FA /* PhotoMapRegion+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF6BB7F1ED202EB008703FA /* PhotoMapRegion+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,8 @@
 		9FF6BB7A1ED1FCDC008703FA /* _User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _User.h; path = PhotoWall/CoreDatamogenerator/_User.h; sourceTree = "<group>"; };
 		9FF6BB7B1ED1FCDC008703FA /* _User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _User.m; path = PhotoWall/CoreDatamogenerator/_User.m; sourceTree = "<group>"; };
 		9FF6BB7D1ED1FD2A008703FA /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Model/Photo.h; sourceTree = "<group>"; };
+		9FF6BB7E1ED202EB008703FA /* PhotoMapRegion+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PhotoMapRegion+Utils.h"; path = "Utils/PhotoMapRegion+Utils.h"; sourceTree = "<group>"; };
+		9FF6BB7F1ED202EB008703FA /* PhotoMapRegion+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PhotoMapRegion+Utils.m"; path = "Utils/PhotoMapRegion+Utils.m"; sourceTree = "<group>"; };
 		C4E3393C9379A1F83641833B /* Pods_PhotoWall_PhotoWallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoWall_PhotoWallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66359A8696F7F49B6FC9051 /* Pods-PhotoWall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoWall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoWall/Pods-PhotoWall.debug.xcconfig"; sourceTree = "<group>"; };
 		CBDFCD3903FCDE53D83F2B21 /* Pods-PhotoWall-PhotoWallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoWall-PhotoWallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoWall-PhotoWallTests/Pods-PhotoWall-PhotoWallTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -327,6 +330,8 @@
 				9FF6BB661ED1EFF6008703FA /* UIImageView+WebImage.m */,
 				9FF6BB741ED1F8C2008703FA /* NSDate+Utils.h */,
 				9FF6BB751ED1F8C2008703FA /* NSDate+Utils.m */,
+				9FF6BB7E1ED202EB008703FA /* PhotoMapRegion+Utils.h */,
+				9FF6BB7F1ED202EB008703FA /* PhotoMapRegion+Utils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 				9FF6BB5F1ED1DCAE008703FA /* UserManager.m in Sources */,
 				9FF6BB131ED0A471008703FA /* UIColor+Defaults.m in Sources */,
 				9FF6BAFD1ED0A349008703FA /* ProfileViewController.m in Sources */,
+				9FF6BB801ED202EB008703FA /* PhotoMapRegion+Utils.m in Sources */,
 				9FF6BADE1ED075B6008703FA /* UIViewController+Mask.m in Sources */,
 				9FF6BB701ED1F857008703FA /* PhotoMapRegion.m in Sources */,
 				9FF6BAD11ED06EB0008703FA /* Mapping1-2.xcmappingmodel in Sources */,
@@ -642,7 +648,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -684,7 +690,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

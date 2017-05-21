@@ -18,7 +18,7 @@ NSString* const FriendCellIdentifier = @"FriendCell";
 @implementation FriendCell
 
 - (void)setFriend:(User*)aFriend {
-    self.nickNameLabel.text = aFriend.nickname;
+    self.nicknameLabel.text = aFriend.nickname;
     
     self.portraitView.layer.masksToBounds = YES;
     self.portraitView.layer.borderColor = [UIColor main].CGColor;

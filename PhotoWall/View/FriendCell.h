@@ -12,7 +12,7 @@
 FOUNDATION_EXPORT NSString* const FriendCellIdentifier;
 
 @interface FriendCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nicknameLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *portraitView;
 

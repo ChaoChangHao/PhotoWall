@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class UserManager;
+@class PhotoManager;
+
 @interface PhotoGridViewController : UIViewController
 
 @property (nonatomic, weak) UIViewController* rootViewController;
+
+@property (nonatomic) NSString* posterId;
+@property (nonatomic, weak) UserManager* userManager;
+@property (nonatomic, weak) PhotoManager* photoManager;
+
+- (void)refreshPhotos;
 @end
