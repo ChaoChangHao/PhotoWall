@@ -1,6 +1,6 @@
 #import "_User.h"
 
-@interface User : _User
+@interface User : _User {}
 
 - (instancetype)initWithJson:(id)json;
 

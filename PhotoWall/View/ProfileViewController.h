@@ -10,9 +10,8 @@
 
 #import "AccountManager.h"
 
-@interface ProfileViewController : UIViewController<AccountEditDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ProfileViewController : UIViewController
 
-@property (weak) AccountManager* accountManager;
 @property (weak) UIViewController* rootViewController;
 
 @end

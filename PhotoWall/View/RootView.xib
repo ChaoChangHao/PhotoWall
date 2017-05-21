@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,18 +23,18 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-5j-8s9" userLabel="Container">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXC-84-uf5" userLabel="Tab Bars">
-                    <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                    <rect key="frame" x="0.0" y="416" width="320" height="64"/>
                     <subviews>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CQ-Bt-tkq" userLabel="Friends Button">
-                            <rect key="frame" x="0.0" y="35" width="75" height="40"/>
+                            <rect key="frame" x="0.0" y="24" width="64" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="eqB-eo-bjd"/>
                             </constraints>
@@ -45,7 +45,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gJ-MJ-bgh" userLabel="Grid Tab Button">
-                            <rect key="frame" x="75" y="35" width="75" height="40"/>
+                            <rect key="frame" x="64" y="24" width="64" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Orh-na-0h8"/>
                             </constraints>
@@ -56,14 +56,14 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Huo-Io-pBI" userLabel="Take Picture">
-                            <rect key="frame" x="150" y="0.0" width="75" height="75"/>
+                            <rect key="frame" x="128" y="0.0" width="64" height="64"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Huo-Io-pBI" secondAttribute="height" id="2X8-ce-g4C"/>
                             </constraints>
                             <state key="normal" image="take_picture"/>
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71k-jS-9tT" userLabel="Map">
-                            <rect key="frame" x="225" y="35" width="75" height="40"/>
+                            <rect key="frame" x="192" y="24" width="64" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="aBc-p6-nru"/>
                             </constraints>
@@ -74,7 +74,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAv-wF-UFy" userLabel="Profile">
-                            <rect key="frame" x="300" y="35" width="75" height="40"/>
+                            <rect key="frame" x="256" y="24" width="64" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="3Q2-LU-qFU"/>
                             </constraints>
@@ -85,7 +85,7 @@
                             </connections>
                         </button>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnf-6o-3AM" userLabel="Background">
-                            <rect key="frame" x="150" y="35" width="75" height="40"/>
+                            <rect key="frame" x="128" y="24" width="64" height="40"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                     </subviews>

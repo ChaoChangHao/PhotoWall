@@ -13,15 +13,11 @@
 #import "RestClient.h"
 #import "KeyChainSecuredAuthenticator.h"
 
-
 #import "LoginViewController.h" //登入畫面
 #import "RootViewController.h"
 
 #import "UIViewController+Mask.h"
 
-@interface AppDelegate ()
-
-@end
 
 @implementation AppDelegate {
     RestClient* _client;
@@ -51,6 +47,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
 }
 
 
@@ -112,17 +109,17 @@
 
 - (void)showRootView {
     RootViewController* root = [[RootViewController alloc] initWithNibName:@"RootView" bundle:nil];
-//    root.userManager = self.userManager;
-//    root.photoManager = self.photoManager;
+    root.userManager = self.userManager;
+    root.photoManager = self.photoManager;
     root.accountManager = self.accountManager;
     UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:root];
     [self.window setRootViewController:navigation];
-//    [self.userManager synchronize];
+    [self.userManager synchronize];
 }
 
 - (void)initializeManagers {
-//    self.userManager = [[UserManager alloc] initWithClient:_client];
-//    self.photoManager = [[PhotoManager alloc] initWithClient:_client];
+    self.userManager = [[UserManager alloc] initWithClient:_client];
+    self.photoManager = [[PhotoManager alloc] initWithClient:_client];
     self.accountManager = [[AccountManager alloc] initWithClient:_client];
     self.accountManager.authDelegate = self;
 }

@@ -16,11 +16,7 @@
 #import "UIView+Utils.h"
 #import "UIColor+Defaults.h"
 
-//#import "PhotoManager.h"
-
-@interface RootViewController ()
-
-@end
+#import "PhotoManager.h"
 
 @implementation RootViewController {
     ProfileViewController* _profileViewController;
@@ -54,14 +50,13 @@
     _viewControllers = @[ _friendsViewController, _photoGridViewController, _photoMapViewController, _profileViewController ];
     
     _profileViewController.rootViewController = self;
-    _profileViewController.accountManager = self.accountManager;
     
     _photoGridViewController.rootViewController = self;
     
     _photoMapViewController.rootViewController = self;
     
     _friendsViewController.rootViewController = self;
-    
+    _friendsViewController.userManager = self.userManager;
     
     [self setSelectedIndex:0];
     [self setTitle:@"Friends"];
@@ -82,7 +77,15 @@
     }
 }
 
-
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+//    [picker dismissViewControllerAnimated:YES completion:nil];
+//    UIImage* image = [info valueForKey:UIImagePickerControllerOriginalImage];
+//    NSData* pngData = UIImagePNGRepresentation(image);
+//    [self.photoManager uploadPhoto:pngData withHandler:^(NSError* error, NSArray* photos) {
+//        [_photoGridViewController refreshPhotos];
+//    }];
+}
 #pragma mark - Private Methods
 - (void)setSelectedIndex:(NSInteger)index {
     if (index < 0 || index > [_viewControllers count]) {

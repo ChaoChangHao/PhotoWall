@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>PhotoWall needs the permission to share your photos.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>PhotoWall needs the permsiion to share your photo&apos;s location</string>
 	<key>ServerEndPoint</key>
 	<string>http://140.124.182.119:4567/ws</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -24,8 +28,6 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

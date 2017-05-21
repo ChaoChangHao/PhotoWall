@@ -28,5 +28,4 @@
 
 - (void)showPhotosOfUser:(NSString*)userId;
 
-
 @end

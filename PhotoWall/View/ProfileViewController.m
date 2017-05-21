@@ -8,9 +8,7 @@
 
 #import "ProfileViewController.h"
 
-@interface ProfileViewController ()
 
-@end
 
 @implementation ProfileViewController
 

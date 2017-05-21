@@ -1,4 +1,5 @@
 #import "User.h"
+
 #import <MagicalRecord/MagicalRecord.h>
 
 @interface User ()

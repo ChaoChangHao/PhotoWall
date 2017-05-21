@@ -20,6 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 @property (nonatomic, readonly, strong) UserID *objectID;
 
+@property (nonatomic, strong, nullable) NSNumber* favorite;
+
+@property (atomic) BOOL favoriteValue;
+- (BOOL)favoriteValue;
+- (void)setFavoriteValue:(BOOL)value_;
+
 @property (nonatomic, strong, nullable) NSString* identifier;
 
 @property (nonatomic, strong, nullable) NSString* nickname;
@@ -27,6 +33,12 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface _User (CoreDataGeneratedPrimitiveAccessors)
+
+- (nullable NSNumber*)primitiveFavorite;
+- (void)setPrimitiveFavorite:(nullable NSNumber*)value;
+
+- (BOOL)primitiveFavoriteValue;
+- (void)setPrimitiveFavoriteValue:(BOOL)value_;
 
 - (nullable NSString*)primitiveIdentifier;
 - (void)setPrimitiveIdentifier:(nullable NSString*)value;
@@ -37,6 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface UserAttributes: NSObject 
++ (NSString *)favorite;
 + (NSString *)identifier;
 + (NSString *)nickname;
 @end
